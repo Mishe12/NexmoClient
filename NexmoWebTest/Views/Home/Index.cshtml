@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron alert-success">
+    <h1>Nexmo Client</h1>
+    <p class="lead">This One-page application is used to make a phone call using the Nexmo API that is consumed by our own Library class!</p>
+    <p><a href="https://github.com/Mishe12/NexmoClient" class="btn btn-success btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    @using (Html.BeginForm("CallTest", "Home", FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+        <div class="panel panel-success">
+            <div class="panel-heading">Enter Message Here:</div>
+            <div class="panel-body">
+                @Html.TextArea("Message", new { @class = "form-control"})
+            </div>
+            <div class="panel-footer clearfix">
+                <input type="submit" class="btn btn-success" value="Call!" />
+            </div>
+        </div>
+    }
+</div>
